@@ -1,5 +1,5 @@
 # Backend do app de cardapio
-Este é o backend da aplicação de academia. Note que essa aplicação utiliza docker para rodar o ambiente.
+Este é o backend da aplicação de cardapio. Note que essa aplicação utiliza docker para rodar o ambiente.
 Para isso, segue um tutorial de como rodar essa aplicação corretamente:
 
 ## Pré-requisitos
@@ -15,23 +15,15 @@ Antes de começar, certifique-se de ter o Docker e o Docker Compose instalados e
 5. Para parar o contêiner, execute o seguinte comando: `docker-compose down`
 6. Pronto, a aplicação estará rodando no seguinte endereço: `http://localhost:8080`
 
-## Rotas
+## Rotas (WIP)
 As seguintes rotas estão disponíveis:
 
 ### Sem autenticação:
-- POST `/user` - criação de aluno ou instrutor
-- POST `/user/login` - login do usuário (aqui o Bearer `token` é gerado)
-- GET `/user/search` - procurar instrutor
-- GET `/feedback/:id_instrutor` - obter feedbacks do instrutor em específico
+- 
 
 ### Com autenticação:
-- PATCH `/user/instrutor` - atualizar os dados do instrutor (requer Bearer `token` de algum instrutor)
-- POST `/treino` - criar treino do aluno (requer Bearer `token` de algum instrutor)
-- PATCH `/treino/:id_treino` - atualizar o treino do aluno (requer Bearer `token` de algum instrutor)
-- GET `/treino/aluno/:id_aluno` - obter a lista de treinos do aluno (requer Bearer `token` de algum instrutor ou do próprio aluno)
-- DELETE `/treino/:id_treino/delete` - deletar o treino do aluno (requer Bearer `token` de algum instrutor)
-- POST `/feedback` - criar um feedback do aluno para instrutor (requer Bearer `token` de um aluno e esse aluno só pode mandar feedback apenas para o instrutor atual)
-- PATCH `/feedback/:id_feedback` - atualizar um feedback (requer Bearer `token` do aluno que fez o feedback)
-- DELETE `/feedback/:id_feedback` - deletar um feedback (requer Bearer `token` do aluno que fez o feedback)
+- 
 
+
+### Insomnia (WIP)
 No arquivo `Insomnia.json`, na raiz do projeto, podes importar todas as rotas na aplicação Insomnia e facilmente fazer requests para as rotas.
