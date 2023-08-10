@@ -5,6 +5,8 @@ const cors = require("cors")
 const helmet = require("helmet")
 const morgan = require("morgan")
 
+const UserController = require("./controllers/UserController")
+
 const app = express()
 
 // Configurações de segurança
@@ -16,6 +18,7 @@ app.use(morgan("tiny"))
 app.use(express.json())
 
 // Configuração das rotas
+app.use("/user", UserController)
 
 // Iniciar o servidor
 const port = process.env.PORT || 8080
