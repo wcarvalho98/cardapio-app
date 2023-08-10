@@ -1,5 +1,5 @@
 # Use a imagem do Node.js como base
-FROM node:slim
+FROM node:lts-slim
 
 # Crie um diretório de trabalho para a aplicação
 WORKDIR /src
