@@ -6,6 +6,7 @@ const helmet = require("helmet")
 const morgan = require("morgan")
 
 const UserController = require("./controllers/UserController")
+const MenuController = require("./controllers/MenuController")
 
 const app = express()
 
@@ -19,6 +20,7 @@ app.use(express.json())
 
 // Configuração das rotas
 app.use("/user", UserController)
+app.use("/menu", MenuController)
 
 // Iniciar o servidor
 const port = process.env.PORT || 8080
