@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 const Menu = require("../models/Menu")
 const Joi = require("joi")
-// const jwt = require("../config/midleware")
+const jwt = require("../config/midleware")
 
 const menuSchema = Joi.object({
   name: Joi.string().required(),
@@ -10,7 +10,7 @@ const menuSchema = Joi.object({
   amount: Joi.number().required(),
 })
 
-router.post("/", async (req, res) => {
+router.post("/", jwt, async (req, res) => {
   const { error } = menuSchema.validate(req.body)
 
   if (error) {

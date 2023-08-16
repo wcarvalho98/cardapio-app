@@ -7,6 +7,7 @@ const morgan = require("morgan")
 
 const UserController = require("./controllers/UserController")
 const MenuController = require("./controllers/MenuController")
+const RestaurantController = require("./controllers/RestaurantController")
 
 const app = express()
 
@@ -21,6 +22,9 @@ app.use(express.json())
 // Configuração das rotas
 app.use("/user", UserController)
 app.use("/menu", MenuController)
+app.use("/restaurant", RestaurantController)
+
+// Rota inicial
 app.get("/", (_, res) => {
   res.json("Hello World!")
 })

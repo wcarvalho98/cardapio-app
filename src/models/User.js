@@ -11,9 +11,7 @@ const UserSchema = new mongoose.Schema({
     index: true,
   },
   password: { type: String, required: true },
-  restaurantName: { type: String, required: true },
-  restaurantAddress: { type: String },
-  restaurantPhone: { type: String },
+  restaurant: { type: mongoose.Schema.Types.ObjectId, ref: "Restaurant" },
 })
 
 // Hash da senha antes de salvar no banco de dados
