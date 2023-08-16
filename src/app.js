@@ -21,6 +21,9 @@ app.use(express.json())
 // Configuração das rotas
 app.use("/user", UserController)
 app.use("/menu", MenuController)
+app.get("/", (_, res) => {
+  res.json("Hello World!")
+})
 
 // Iniciar o servidor
 const port = process.env.PORT || 8080

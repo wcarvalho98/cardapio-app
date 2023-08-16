@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const mongoose = require("../config/database")
 
 const MenuScheme = new mongoose.Schema({
@@ -9,5 +8,4 @@ const MenuScheme = new mongoose.Schema({
 
 const Menu = mongoose.model("Menu", MenuScheme)
 
-// eslint-disable-next-line eol-last
 module.exports = Menu
