@@ -7,8 +7,8 @@ Antes de começar, certifique-se de ter o Docker e o Docker Compose instalados e
 - Docker Desktop: https://docs.docker.com/get-docker/
 
 ## Passo a passo
-1. Clone o repositório da aplicação: `git clone https://github.com/wcarvalho98/academia-app-backend`
-2. Navegue até a pasta do projeto: `cd academia-backend`
+1. Clone o repositório da aplicação: `git clone https://github.com/wcarvalho98/cardapio-app-backend`
+2. Navegue até a pasta do projeto: `cd cardapio-app`
 3. Execute o seguinte comando para criar e iniciar os containers: `docker-compose up --build`
    - O comando acima irá baixar as imagens necessárias, criar os containers e iniciar a aplicação.
 4. Aguarde até que o contêiner esteja em execução. Você deverá ver uma saída semelhante a esta: `backend-app-1 | Servidor rodando na porta 8080` e `backend-app-1 | MongoDB connected.`
